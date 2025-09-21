@@ -1,0 +1,82 @@
+# Changelog
+
+## [v1.0.0]
+- **Improved Performance**
+  - Paper loading is now threaded for faster UI responsiveness
+  - Significant optimisation of basic functions and similarity search
+  - Switched to test database for streamlined development
+
+- **Testing & CI/CD Enhancements**
+  - Expanded unit test coverage including Neo4j and paper loading
+  - Added licensing headers to unit tests
+  - Fixed unit tests and filtered out redundant warnings
+  - Set up a native GitLab Python pipeline for CI (removed Docker due to network issues)
+
+- **Search and Output Improvements**
+  - Added thresholding to semantic similarity search
+  - Default search results now filtered by year (except similarity)
+  - Fixed output display bugs and enabled <Tab> key to toggle focus regions
+  - Limited input area to 100 characters for security and better control
+
+- **User Interface Updates**
+  - Refined help menu and command display order
+  - Improved table layout and fixed overflow for large queries
+  - PaperSuRF ASCII logo added to welcome screen
+
+- **Documentation & User Guidance**
+  - Updated README with new screenshots and visual tweaks
+  - Expanded user documentation with clearer CLI visuals
+
+- **Infrastructure & Maintenance**
+  - Added database backup feature
+  - Restructured internal code for better maintainability
+  - Improved `.gitignore` and removed unused Docker files
+
+---
+
+## [v0.3.0]
+- Introduced shorthand counterparts for existing commands
+- Added additional unit tests
+- Update LICENSE file year
+- Added pytest.ini file
+- Simplified some aspects of the code
+- Output window now supports mouse scrolling
+- Adding papers using using `~/` paths is now supported
+
+--- 
+
+## [v0.2.0]
+
+### Added
+- Implemented visualisation features using `pyvis` for similarity search.
+- Introduced functions for users to add local papers.
+- Added auto-completion for user input in the UI.
+- Introduced a frontend UI redesign for professional mode.
+- Added hint and instruction panels for the command-line interface.
+- Implemented Neo4j database integration with paper storage and similarity search.
+- Included a `.gitkeep` file for the output folder.
+- Added CI/CD configuration with YAML.
+- Introduced initial user documentation.
+- Added support for storing DOI addresses in Neo4j.
+
+### Changed
+- Optimised text encoding by running it during initialisation.
+- Decreased diversity in KeyBERT for main phrases.
+- Refactored the command-line parsing logic.
+- Moved function definitions to improve code organisation.
+- Updated visualisation options and fixed node printing issues.
+- Optimised database loading by using a single `SentenceTransformer` instance.
+
+### Fixed
+- Addressed issues with Neo4j database storage and retrieval.
+- Resolved printing issues for search results.
+- Fixed various UI and formatting inconsistencies.
+- Corrected bugs in similarity search and paper query functions.
+
+---
+
+## [v0.1.0]
+- Initial implementation with Python build fixes.
+- Improved directory structure and refactored project organisation.
+- Introduced a `.gitignore` file and type hints.
+- Added support for handling exceptions in similarity testing.
